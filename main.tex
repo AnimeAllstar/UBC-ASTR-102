@@ -1,0 +1,263 @@
+\documentclass[10pt,landscape]{article}
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage[landscape]{geometry}
+\usepackage{hyperref}
+
+% To make this come out properly in landscape mode, do one of the following
+% 1.
+%  pdflatex latexsheet.tex
+%
+% 2.
+%  latex latexsheet.tex
+%  dvips -P pdf  -t landscape latexsheet.dvi
+%  ps2pdf latexsheet.ps
+
+
+% If you're reading this, be prepared for confusion.  Making this was
+% a learning experience for me, and it shows.  Much of the placement
+% was hacked in; if you make it better, let me know...
+
+
+% 2008-04
+% Changed page margin code to use the geometry package. Also added code for
+% conditional page margins, depending on paper size. Thanks to Uwe Ziegenhagen
+% for the suggestions.
+
+% 2006-08
+% Made changes based on suggestions from Gene Cooperman. <gene at ccs.neu.edu>
+
+
+% To Do:
+% \listoffigures \listoftables
+% \setcounter{secnumdepth}{0}
+
+
+% This sets page margins to .5 inch if using letter paper, and to 1cm
+% if using A4 paper. (This probably isn't strictly necessary.)
+% If using another size paper, use default 1cm margins.
+\ifthenelse{\lengthtest { \paperwidth = 11in}}
+	{ \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
+	{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+	}
+
+% Turn off header and footer
+\pagestyle{empty}
+ 
+
+% Redefine section commands to use less space
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\bfseries}}
+\makeatother
+
+% Define BibTeX command
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+% Don't print section numbers
+\setcounter{secnumdepth}{0}
+
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 0.5ex}
+
+
+% -----------------------------------------------------------------------
+
+\begin{document}
+
+\raggedright
+\footnotesize
+\begin{multicols}{3}
+
+
+% multicol parameters
+% These lengths are set only within the two main columns
+%\setlength{\columnseprule}{0.25pt}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
+
+\begin{center}
+     \Large{\textbf{UBC ASTR 102 Formula Sheet}} \\
+\end{center}
+
+\section{Formulae}
+
+$D = \frac{ad}{206,265}$ \\
+$d$ = distance, $D$ = diameter,  $a$ = angular size (arcseconds) \\ 
+
+$c = \lambda \nu$ \\ 
+$\lambda$ = wavelegth, $\nu$ = frequency \\
+
+$F = \sigma T^4$ \\
+$F$ = energy flux (power per unit surface area), \\$T$ = temperature \\
+
+$\lambda_{max}$ (in nm) $=$ $(3.0 \times 10^6$ K nm) / $T$ (in K) \\
+
+$E = h\nu = \frac{hc}{\lambda}$ \\
+E = energy \\
+
+$\frac{1}{\lambda} = R \left ( \frac{1}{n^2} - \frac{1}{m^2}\right )$ \\
+$n$ = final state, $m$ = initial state \\
+
+$\frac{\Delta\lambda}{\lambda_0} = \frac{\lambda - \lambda_0}{\lambda_0} = \frac{v_r}{c}$\\
+$\lambda_0 =$ original wavelength, $v_r =$ radial velocity\\
+negative $v_r$ = source is approaching\\
+
+$F = ma$ \\
+$F$ = force (N), $m$ = mass (kg), $a$ = acceleration (ms$^{-2}$)\\
+
+$F = \frac{Gm_1m_2}{r^2}$\\
+$r$ = distance between $m_1$ and $m_2$\\
+
+$E_k = \frac{1}{2}mv^2$\\
+$E_k$ = kinetic energy\\
+
+$E_p = mgh$\\
+$E_p$ = potential energy\\
+
+$U = -\frac{GMm}{r}$\\
+$U$ = gravitational potential energy for object in orbit\\
+
+$v_{esc} = \sqrt{\frac{2GM}{r}}$\\
+$v_{esc}$ = escape velocity, $M$ = larger mass\\
+
+$L=4\pi\sigma T^4R^2$\\
+$L$ = Luminosity (Watts), $R$ = radius\\
+
+$E = mc^2$
+
+$d$ (parsecs) $= \frac{1}{p}$ (arcseconds)\\
+$d$ = distance, $p$ = parallax angle\\
+
+$v_t = 4.74 \mu d$\\
+$v_t$ = transverse (tangential) velocity (kms$^{-1}$),\\ $\mu$ = proper motion (arcsec/year), $d$ = distance (parsec)\\
+
+$v = \sqrt{v_t^2+ v_r^2}$\\
+
+$b = \frac{L}{4\pi d^2}$\\
+$b$ = apparent brightness (Wm$^{-2}$)
+
+$\frac{L_1}{L_2} = \left( \frac{d_1}{d_2}\right)^2 = \frac{b_1}{b_2}$\\
+
+$\frac{b_1}{b_2}$ (ratio of brightness of stars) $ = (2.512)^{\Delta m}$\\
+$\Delta m = $ difference in apparent magnitude of stars\\
+
+$m_2 - m_1 = 2.5 \log_{10} \left(\frac{b_1}{b_2}\right)$\\
+$m_1, m_2 = $ apparent magnitudes, $b_1, b_2 = $ brightness\\
+
+$m - M = 5 \log d - 5$\\
+$m = $ apparent magnitude, $M = $ absolute magnitude\\
+$d = $ distance in parsecs.\\
+
+$\frac{b_V}{b_B},\frac{b_B}{b_U}$ = color ratios (lower is hotter)\\
+
+$M_1 + M_2 = \frac{a^3}{P^2}$ (Kepler’s $3^{rd}$ law for binary stars)\\
+$a$ = orbital separation (in AU), $P$ = orbital period (in years)\\
+
+$\frac{M_1}{M_2} = \frac{a_2}{a_1}$\\
+
+$\frac{L}{L_\odot} \simeq \left( \frac{M}{M_\odot} \right)^{3.5}$\\
+
+$\tau_{MS} \simeq \left( \frac{M}{M_\odot} \right) \left( \frac{L_\odot}{L} \right)$ Gyr\\
+$\tau_{MS} = $ main sequence lifetime, Gyr = Giga year\\
+
+$E = fMc^2$\\
+Energy derived from $H->He$ conversion\\
+$f = 7 \times 10^{-4}$\\
+
+$L = \frac{E}{t}$\\
+$L$ is Luminosity, $t$ is time\\
+
+$Lt = fMc^2$
+
+$t = \frac{fMc^2}{L} \propto \frac{M}{L} \propto \frac{M}{M^{3.5}} \propto M^{-2.5}$
+\section{Constants}
+
+\begin{tabular}{@{}ll@{}}
+$c$ (speed of light)    &   $3 \times 10^8$ ms$^{-1}$ \\
+$\sigma$ (Stefan-Boltzmann constant)   &    $5.67 \times 10^{-8}$ Wm$^{-2}$K$^{-4}$ \\
+$h$ (Planck’s constant) &   $6.626 \times 10^{-34}$ Js\\
+$R$ (Rydberg constant)  &   $1.097 \times 10^{7}$ m$^{-1}$\\
+$G$ (Newton’s constant)  &   $6.67 \times 10^{-11}$ Nm$^{2}$kg$^{-2}$\\
+$g$ (gravity)   &   $9.8$ ms$^{-2}$
+\end{tabular}
+
+\section{Conversions}
+
+\begin{tabular}{@{}ll@{}}
+\verb!1 degree!    & 60 arcminutes \\
+\verb!1 arcminute! & 60 arcseconds \\
+\verb!1 lightyear! & $9.46 \times 10^{12}$ km\\
+\verb!1 AU! & $1.5 \times 10^{11}$ m\\
+\verb!1 parsec! & $3.26$ lightyears\\
+\verb!1 m! & $10^9$ nm\\
+\verb!1 Gyr! & $10^9$ years\\
+\end{tabular}
+
+\section{Chemical Processes}
+
+proton proton chain\\
+triple alpha process\\
+
+\section{Diagrams}
+
+Blackbody spectrum\\
+Cumulative Luminosity\\
+Temperature and Density from the core\\
+HR diagram\\
+
+\section{Miscellaneous 1}
+\begin{itemize}
+    \item absolute magnitude: apparent magnitude a star would have if it were located exactly 10 parsecs from Earth
+    \item 10\% of the mass of the star will be converted from H to He while it is on the main sequence.
+    \item emission nebulae glow because UV knocking off electrons, which then recombine, and release photons in the visible spectrum.
+    \item dark nebulae is caused due to dust, required for star formation, don't block infrared.
+    \item reflection nebula contain fine grains of dust, they scatter short wavelength blue light efficiently, causing a reddening effect on stars.
+    \item Protostars are initial stars formed in dark nebulae. 
+    \item Larger protostars take a shorter amount of time to reach the main sequence.
+    \item planet $< 0.012 M_\odot <$ brown dwarf $< 0.08 M_\odot <$ main sequence stars $< 200 M_\odot$
+    \item high mass stars burn through their fuel first
+    \item open clusters - held together by gravitational forces
+    \item stellar association - fast moving cluster, mostly O, B stars (OB association)
+    \item globular clusters - large, old clusters
+    \item CO helps predict star formation
+    \item A red dwarf is a main-sequence star with less than about 0.4 solar masses. Helium star.
+    \item End of H fusion: core starts to cool, pressure in the core starts to decrease, the core compresses/shrinks, the temperature to increase again, and outer layers will expand.
+    \item In red giants with a mass less than about 2 to 3 $M\odot$ but still more than 0.4 $M\odot$, helium fusion begins explosively and suddenly, in what is called the helium flash. 
+    \item If the core is contracting (no fusion): Core temperature goes up, Heat transfers to the outer layers, The outer layers expand, (Low mass: Luminosity increases)
+    \item If the core is expanding (fusion): Core temperature goes down, Less heat to the outer layers, The outer layers shrink (Low mass: Luminosity decreases)
+\end{itemize}
+\section{Miscellaneous 2}
+
+\begin{tabular}{@{}ll@{}}
+\verb!violet light!    & 400 $nm$ \\
+\verb!red light!    & 700 $nm$ \\
+\verb!blue shift!    & approaching (short $\lambda$) \\
+\verb!red shift!    & receding (longer $\lambda$) \\
+$L_\odot$    &  Luminosity of the sun\\
+$M_\odot$    &  Mass of the sun\\
+\verb!layers of sun!   &   Thermonuclear $->$ radiative $->$ convection\\
+$m - M$ & Distance modulus (apparent - absolute)\\
+OBAFGKM & current ordering of stars (hot to cold)\\
+L, T, Y & brown dwarf spectral classes
+\end{tabular}
+
+\end{multicols}
+\end{document}
